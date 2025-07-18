@@ -9,10 +9,23 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+const data = new Date()
+const hour = data.getHours()
+
+const SayHi = (word) => {
+    if (hour > 17) {
+       return `Buonasera ${word}`
+    } 
+    else if (hour > 13 && hour <= 17) {
+        return `Buon Pomeriggio ${word}`
+    } 
+    else if (hour <= 13) {
+        return `Buongiorno ${word}`
+    }
+}
 
 
 // Invoca la funzione qui e stampa il risultato in console
-
-
+console.log(SayHi('Mario'))
 
 //Risultato atteso se si passa 'Mario' alle 18: // Buonasera Mario.
